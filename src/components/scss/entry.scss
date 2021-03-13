@@ -1,0 +1,67 @@
+@mixin background($propSize) {
+  background-position: center;
+  background-size: $propSize;
+  background-repeat: no-repeat;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playball&display=swap');
+
+$base_Orange: #ffa500;
+$trans_Black: hsla(0, 0%, 0%, 0.48);
+$trans_Orange: rgba(255, 166, 0, 0.5);
+$light_Orange: #ffe4b2;
+$warning_red: #f1adad;
+$red: #eb4335;
+$done_green: #ccfbbc;
+$complete_green: #34a853;
+$lato: 'Lato', sans-serif;
+
+.entryContent {
+  height: 85vh;
+  width: 90vw;
+  margin: 6.5vh auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .leftDiv {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    background: url(../asset/cone.svg), $base_Orange;
+    @include background(70%);
+    p {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      color: rgba(0, 0, 0, 0.48);
+      text-align: center;
+      margin-top: calc(85vh / 3);
+    }
+    #joinNow {
+      margin: 2rem auto 0 auto;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background: white;
+      color: $base_Orange;
+      width: max-content;
+      font-weight: 900;
+      font-size: 18px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      user-select: none;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .rightDiv {
+    display: inline-block;
+    height: 100%;
+    background: $trans_Orange;
+  }
+}

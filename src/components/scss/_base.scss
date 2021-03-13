@@ -1,0 +1,15 @@
+$base_Orange: #ffa500;
+$trans_Black: hsla(0, 0%, 0%, 0.48);
+$trans_Orange: hsla(39, 100%, 50%, 0.5);
+$light_Orange: #ffe4b2;
+$warning_red: #f1adad;
+$red: #eb4335;
+$done_green: #ccfbbc;
+$complete_green: #34a853;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playball&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
