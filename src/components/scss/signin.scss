@@ -24,7 +24,52 @@ $lato: 'Lato', sans-serif;
 }
 
 .entryContent {
-  .rightDiv {
+  .leftDivSignIn {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    background: url(../asset/cone.svg), $base_Orange;
+    @include background(70%);
+    margin-right: 1rem;
+    border-radius: 10px;
+    p {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      color: rgba(0, 0, 0, 0.48);
+      text-align: center;
+      margin-top: calc(85vh / 3);
+    }
+    #joinNow {
+      margin: 2rem auto 0 auto;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background: white;
+      color: $base_Orange;
+      width: max-content;
+      font-weight: 900;
+      font-size: 18px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      user-select: none;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .rightDivSignIn {
+    display: inline-block;
+    height: 100%;
+    background: $trans_Orange;
+    margin-left: 1rem;
+    border-radius: 10px;
     #welcome {
       margin-top: 3rem;
       font-size: 36px;
@@ -137,7 +182,7 @@ $lato: 'Lato', sans-serif;
           text-transform: uppercase;
           min-height: 54px;
           min-width: 50px;
-          width: 30%;
+          width: max-content;
           padding: 1rem 2rem;
           border-radius: 10px;
           font-weight: 900;
