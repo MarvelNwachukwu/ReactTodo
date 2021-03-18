@@ -1,12 +1,15 @@
 import React from 'react';
 import './scss/signup.scss';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   return (
     <React.Fragment>
       <div className='leftSignUpDiv'>
         <p>already got an account?</p>
-        <div id='continue'>Sign In</div>
+        <Link to='/signin'>
+          <div id='continue'>Sign In</div>
+        </Link>
       </div>
 
       <div className='rightSignUpDiv'>
@@ -31,7 +34,7 @@ const SignUp = () => {
           <div id='signupEmail'>
             <div id='emailIcon'></div>
             <div className='inputSection'>
-              <label htmlFor='email'>Email</label>
+              <label htmlFor='email'>Email Address</label>
               <input
                 type='email'
                 name='email'

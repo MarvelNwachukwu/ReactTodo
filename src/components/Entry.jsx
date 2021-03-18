@@ -9,13 +9,9 @@ const Entry = (props) => {
   return (
     <Router>
       <div className='entryContent'>
-        <SignIn />
-        {/* <SignUp /> */}
-
         <Switch>
-          <Route path='./SignUp'>
-            <SignUp />
-          </Route>
+          <Route path='/signin' component={SignIn} />
+          <Route path='/signup' component={SignUp} />
         </Switch>
       </div>
     </Router>

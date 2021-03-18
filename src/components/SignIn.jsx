@@ -1,16 +1,15 @@
 import React from 'react';
 import './scss/signin.scss';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import SignUp from './SignUp';
+import { Link } from 'react-router-dom';
 
 const SignIn = (props) => {
   return (
-    <Router>
+    <React.Fragment>
       <div className='leftDivSignIn'>
         <p>First Time Here? </p>
-        <div id='joinNow' to='/SignUp'>
-          join now
-        </div>
+        <Link to='signup'>
+          <div id='joinNow'>join now</div>
+        </Link>
         <div className='Img'></div>
       </div>
       <div className='rightDivSignIn formContainer'>
@@ -61,12 +60,7 @@ const SignIn = (props) => {
           </div>
         </div>
       </div>
-      <Switch>
-        <Route path='./SignUp'>
-          <SignUp />
-        </Route>
-      </Switch>
-    </Router>
+    </React.Fragment>
   );
 };
 export default SignIn;
