@@ -16,6 +16,14 @@ $lato: 'Lato', sans-serif;
   background-repeat: no-repeat;
 }
 
+.entryContent {
+  height: 85vh;
+  width: 90vw;
+  margin: 6.5vh auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .leftSignUpDiv {
   height: 85vh;
   background: url(../asset/donut.svg), $base_Orange;
@@ -183,13 +191,51 @@ $lato: 'Lato', sans-serif;
           outline: none;
           background: none;
           color: black;
-          font-size: 18px;
+          font-size: 24px;
           &::placeholder {
             color: black;
           }
         }
       }
     }
+    // #confirmPassword {
+    //   background: #ffffff;
+    //   border-bottom-right-radius: 10px;
+    //   border-bottom-left-radius: 10px;
+    //   display: grid;
+    //   grid-template-columns: 10% 90%;
+    //   #passwordIcon {
+    //     margin: auto;
+    //     height: 25px * 1.5;
+    //     width: 21.43px * 1.5;
+    //     background: url(../asset/lock.svg);
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: 100%;
+    //   }
+    //   .inputSection {
+    //     display: inline-block;
+    //     height: max-content;
+    //     width: 100%;
+    //     margin-left: 0.5rem;
+    //     // background: green;
+    //     label {
+    //       display: block;
+    //       color: hsla(0, 0%, 0%, 0.48);
+    //     }
+    //     input {
+    //       width: 100%;
+    //       border: none;
+    //       outline: none;
+    //       background: none;
+    //       color: black;
+    //       font-size: 24px;
+    //       &::placeholder {
+    //         color: black;
+    //       }
+    //     }
+    //   }
+    // }
     .submitWrapper {
       width: 430px;
       margin: 0 auto;
