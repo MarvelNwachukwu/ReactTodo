@@ -1,8 +1,7 @@
-import './App.css';
 import React from 'react';
 import Body from './pages/body';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import SignUp from './components/SignUp';
+import SignUp from './pages/SignUp';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import firebase from './firebase';
 
 function App() {
