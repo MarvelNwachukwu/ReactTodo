@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playball&display=swap');
+$base_Orange: #ffa500;
+$trans_Black: hsla(0, 0%, 0%, 0.48);
+$trans_Orange: hsla(39, 100%, 50%, 0.5);
+$light_Orange: #ffe4b2;
+$warning_red: #f1adad;
+$red: #eb4335;
+$done_green: #ccfbbc;
+$complete_green: #34a853;
+$ubuntu: 'Ubuntu Mono', monospace;
+$lato: 'Lato', sans-serif;
+
+@mixin background($propSize) {
+  background-position: center;
+  background-size: $propSize;
+  background-repeat: no-repeat;
+}
+* {
+  overflow-x: hidden;
+}
+#notFound {
+  #navMenu {
+    height: max-content;
+    width: 90vw;
+    margin: 5vh 5vw;
+    padding-left: 1rem;
+    background: $base_Orange;
+    border-radius: 15px;
+    display: flex;
+    #logo {
+      background: url(../assets/time.svg);
+      @include background(100%);
+      height: 70px;
+      width: 70px;
+      align-self: flex-start;
+    }
+  }
+  p {
+    font-family: $lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    color: rgb(0, 0, 0);
+  }
+  .returnHome {
+    padding: 1rem 0.5rem;
+    background: $base_Orange;
+    margin: 010rem auto;
+    width: max-content;
+    border-radius: 10px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.loopTimer {
+  font-size: 500px;
+  text-align: center;
+  padding-top: 25vh;
+  color: rgba(0, 0, 0, 0.1);
+}
+.layer0 {
+  position: fixed;
+}

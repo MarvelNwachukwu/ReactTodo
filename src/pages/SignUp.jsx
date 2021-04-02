@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../components/scss/signup.scss';
 import firebase from '../firebase';
 
@@ -30,9 +30,9 @@ const SignUp = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        let credential = result.credential;
-        let token = credential.accessToken;
-        let user = result.user;
+        // let credential = result.credential;
+        // let token = credential.accessToken;
+        // let user = result.user;
         // console.log(t);
       })
       .catch((err) => {
@@ -52,9 +52,9 @@ const SignUp = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        var credential = result.credential;
-        var token = credential.accessToken;
-        var user = result.user;
+        // var credential = result.credential;
+        // var token = credential.accessToken;
+        // var user = result.user;
         // return result;
       })
       .catch((error) => {

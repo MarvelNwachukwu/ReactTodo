@@ -1,6 +1,7 @@
 import React from 'react';
 import '../components/scss/body.scss';
-import { user } from './SignUp';
+// import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Body = (props) => {
   const greetUser = (event) => {
@@ -17,17 +18,16 @@ const Body = (props) => {
       : console.log('Hello There');
   };
   return (
-    <div id='motherDiv'>
+    <div id='motherDiv' onLoad={(greetUser, console.clear)}>
       <section className='leftSect'></section>
       <section className='rightSect'>
-        <p id='greetingText' onLoad={greetUser}>
-          Good Afternoon, Aurora
-        </p>
+        <p id='greetingText'>Good Afternoon, Aurora</p>
         <div className='addNewTask'>
           <form>
             <input type='text' placeholder='ADD SOMETHING NEW' />
             <div className='timerOptions'>
               <div className='calender'></div>
+              {/* <DatePicker /> */}
               <div className='clock'></div>
             </div>
           </form>
