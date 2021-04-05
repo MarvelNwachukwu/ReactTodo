@@ -1,7 +1,8 @@
 import React from 'react';
 import '../components/scss/body.scss';
+import Task from '../components/task';
 // import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 
 const Body = (props) => {
   const greetUser = (event) => {
@@ -19,7 +20,11 @@ const Body = (props) => {
   };
   return (
     <div id='motherDiv' onLoad={(greetUser, console.clear)}>
-      <section className='leftSect'></section>
+      <section className='leftSect'>
+        <Task />
+        <Task />
+        <Task />
+      </section>
       <section className='rightSect'>
         <p id='greetingText'>Good Afternoon, Aurora</p>
         <div className='addNewTask'>

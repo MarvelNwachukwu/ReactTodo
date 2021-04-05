@@ -38,7 +38,7 @@ $lato: 'Lato', sans-serif;
 }
 
 .leftSect {
-  background: url(../assets/donut.svg), $light_Orange;
+  background: url(../assets/donut.svg), #ffe4b26e;
   @include background(70%);
   border-radius: 10px;
 }

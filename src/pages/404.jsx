@@ -15,6 +15,9 @@ const NotFound = () => {
       setLoopNumber(timeStamp / 10);
     }, 100);
   };
+  const redirect = () => {
+    history.push('/');
+  };
 
   return (
     <div id='notFound' onLoad={countDown()}>
@@ -24,13 +27,7 @@ const NotFound = () => {
         </div>
         <p>Oops, look like you’re stuck in a time-loop</p>
 
-        <div
-          className='returnHome'
-          onClick={() => {
-            console.log('I was clicked');
-            history.push('/');
-          }}
-        >
+        <div className='returnHome' onClick={redirect}>
           Break The Loop
         </div>
       </div>
