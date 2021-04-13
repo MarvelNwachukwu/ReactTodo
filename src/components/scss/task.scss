@@ -9,9 +9,8 @@ $complete_green: #34a853;
 $lato: 'Lato', sans-serif;
 
 .taskPg {
-  background: rgb(148, 64, 64);
   height: max-content;
-  width: 80%;
+  width: 90%;
   margin: 1rem auto 0 auto;
   padding: 1rem;
   border: 1px solid rgba(255, 165, 0, 0.5);
@@ -19,19 +18,40 @@ $lato: 'Lato', sans-serif;
   background: $warning_red;
   box-shadow: 0.5px 2px 4px 4px rgba(255, 165, 0, 0.5);
   display: grid;
-  grid-template-columns: 3.5fr 1.25fr;
+  grid-template-columns: 3.5fr 1fr;
 }
 .taskDetails {
   height: 100px;
   background: rgb(218, 116, 116);
+
   .taskName {
+    font-size: 24px;
   }
   .dueDate {
+    font-size: 14px;
+    margin: 0;
+    float: left;
+    color: black;
   }
   .dueIn {
+    font-size: 14px;
+    margin: 0;
+    float: right;
+    color: black;
   }
 }
 .taskButtons {
   height: 100px;
   background: rgb(211, 201, 201);
+
+  #cancel_btn,
+  #done_btn,
+  #delete_btn {
+  }
+  #cancel_btn {
+  }
+  #done_btn {
+  }
+  #delete_btn {
+  }
 }

@@ -33,7 +33,7 @@ $lato: 'Lato', sans-serif;
 .leftSect,
 .rightSect {
   height: 80%;
-  width: 90%;
+  width: 80%;
   margin: 10% auto;
 }
 
@@ -41,6 +41,7 @@ $lato: 'Lato', sans-serif;
   background: url(../assets/donut.svg), #ffe4b26e;
   @include background(70%);
   border-radius: 10px;
+  width: 100%;
 }
 .rightSect {
   //   background: rgb(136, 181, 211);
