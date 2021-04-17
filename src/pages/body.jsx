@@ -8,9 +8,6 @@ const Body = (props) => {
   let input = useRef();
   let greetingText = useRef();
   let [newTask, setNewTask] = useState('');
-  let uniqueID = new Date().getTime();
-
-  console.log(uniqueID);
   // firebase
   let user = firebase.auth().currentUser;
   let firstName = user.displayName.split(' ')[0];
@@ -28,27 +25,13 @@ const Body = (props) => {
       : (greetingText.current.innerHTML = `Hello There ${firstName}`);
   };
 
-  setTimeout(() => {
-    if (user) {
-      greetUser();
-    }
-  }, 100);
   // firestore doc link
 
-  let firebaseSave = firebase.firestore().collection('Tasks').doc(user.uid);
+  let firebaseSave = firebase.firestore().collection(user.uid).doc();
 
   const saveToFirebase = () => {
-    // firebaseSave.get().then((doc) => {
-    //   if (doc.exists) {
-    //     let userDataObj = doc.data();
-    //     let prevNumberOfTasks = Object.keys(userDataObj).length;
-    //   } else {
-    //     let prevNumberOfTasks = 0;
-    //   }
-    // });
-
     firebaseSave
-      .set({ userTasks: newTask }, { merge: true })
+      .set({ task: newTask })
       .then((Response) => {
         console.log(Response);
       })
@@ -57,9 +40,29 @@ const Body = (props) => {
       });
   };
 
+  const fetchFromFirebase = () => {
+    let docRef = firebase.firestore();
+
+    docRef
+      .collection(user.uid)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.id, ' => ', doc.data());
+        });
+      });
+  };
+
   const inputChanged = () => {
     setNewTask(input.current.value);
   };
+
+  setTimeout(() => {
+    if (user) {
+      greetUser();
+      fetchFromFirebase();
+    }
+  }, 100);
 
   return (
     <div id='motherDiv'>
