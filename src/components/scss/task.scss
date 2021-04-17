@@ -1,0 +1,57 @@
+$base_Orange: #ffa500;
+$trans_Black: hsla(0, 0%, 0%, 0.48);
+$trans_Orange: hsla(39, 100%, 50%, 0.5);
+$light_Orange: #ffe4b2;
+$warning_red: #f1adad;
+$red: #eb4335;
+$done_green: #ccfbbc;
+$complete_green: #34a853;
+$lato: 'Lato', sans-serif;
+
+.taskPg {
+  height: max-content;
+  width: 90%;
+  margin: 1rem auto 0 auto;
+  padding: 1rem;
+  border: 1px solid rgba(255, 165, 0, 0.5);
+  border-radius: 10px;
+  background: $warning_red;
+  box-shadow: 0.5px 2px 4px 4px rgba(255, 165, 0, 0.5);
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+}
+.taskDetails {
+  height: 100px;
+  background: rgb(218, 116, 116);
+
+  .taskName {
+    font-size: 24px;
+  }
+  .dueDate {
+    font-size: 14px;
+    margin: 0;
+    float: left;
+    color: black;
+  }
+  .dueIn {
+    font-size: 14px;
+    margin: 0;
+    float: right;
+    color: black;
+  }
+}
+.taskButtons {
+  height: 100px;
+  background: rgb(211, 201, 201);
+
+  #cancel_btn,
+  #done_btn,
+  #delete_btn {
+  }
+  #cancel_btn {
+  }
+  #done_btn {
+  }
+  #delete_btn {
+  }
+}

@@ -16,257 +16,69 @@ $lato: 'Lato', sans-serif;
   background-repeat: no-repeat;
 }
 
-.leftSignUpDiv {
-  height: 85vh;
-  background: url(../asset/donut.svg), $base_Orange;
-  @include background(70%);
-  margin-right: 1rem;
-  border-radius: 10px;
-  p {
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 48px;
-    font-weight: 900;
-    color: $trans_Black;
-    margin-top: calc(85vh / 3);
-  }
-  #continue {
-    margin: 2rem auto 0 auto;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    background: white;
-    color: $base_Orange;
-    width: max-content;
-    font-weight: 900;
-    font-size: 18px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    user-select: none;
-    &:hover {
-      transform: scale(1.05);
-    }
-    &:active {
-      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-    }
+#signUpNavMenu {
+  height: max-content;
+  width: 90vw;
+  margin: 5vh 5vw;
+  padding-left: 1rem;
+  background: $base_Orange;
+  border-radius: 15px;
+  display: flex;
+  #logo {
+    background: url(../assets/time.svg);
+    @include background(100%);
+    height: 70px;
+    width: 70px;
+    align-self: flex-start;
   }
 }
-.rightSignUpDiv {
-  background: $trans_Orange;
-  margin-left: 1rem;
-  border-radius: 10px;
-  display: inline-block;
-  #hello {
-    margin-top: 3rem;
-    font-size: 36px;
-    text-transform: capitalize;
-    font-weight: 700;
-    margin-left: 2rem;
-  }
-  #signUpInstruction {
-    margin-bottom: 2rem;
-    font-size: 18px;
-    margin-left: 2rem;
-  }
-  form {
-    #signupName,
-    #signupEmail,
-    #signupPassword {
-      height: max-content;
-      width: 430px;
-      margin: 0 auto;
-      font-size: 24px;
-      padding: 0.5rem;
-    }
-    // #signupName {
-    //   background: #ffffff;
-    //   border-top-right-radius: 10px;
-    //   border-top-left-radius: 10px;
-    //   display: grid;
-    //   grid-template-columns: 10% 90%;
-    //   #nameIcon {
-    //     margin: auto;
-    //     height: 25px * 1.5;
-    //     width: 21.43px * 1.5;
-    //     background: url(../asset/person.svg);
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: 100%;
-    //   }
-    //   .inputSection {
-    //     display: inline-block;
-    //     height: max-content;
-    //     width: 100%;
-    //     margin-left: 0.5rem;
-    //     label {
-    //       display: block;
-    //       color: hsla(0, 0%, 0%, 0.48);
-    //     }
-    //     input {
-    //       width: 100%;
-    //       border: none;
-    //       outline: none;
-    //       background: none;
-    //       color: black;
-    //       font-size: 18px;
-    //       &::placeholder {
-    //         color: black;
-    //       }
-    //     }
-    //   }
-    // }
-    #signupEmail {
-      background: #e5e5e5;
-      display: grid;
-      grid-template-columns: 10% 90%;
-      #emailIcon {
-        margin: auto;
-        height: 25px * 1.5;
-        width: 21.43px * 1.5;
-        background: url(../asset/email.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-      }
-      .inputSection {
-        display: inline-block;
-        height: max-content;
-        width: 100%;
-        margin-left: 0.5rem;
-        // background: green;
-        label {
-          display: block;
-          color: hsla(0, 0%, 0%, 0.48);
-        }
-        input {
-          width: 100%;
-          border: none;
-          outline: none;
-          background: none;
-          color: black;
-          font-size: 18px;
-          &::placeholder {
-            color: black;
-          }
-        }
-      }
-    }
-    #signupPassword {
-      background: #ffffff;
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      display: grid;
-      grid-template-columns: 10% 90%;
-      #passwordIcon {
-        margin: auto;
-        height: 25px * 1.5;
-        width: 21.43px * 1.5;
-        background: url(../asset/lock.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-      }
-      .inputSection {
-        display: inline-block;
-        height: max-content;
-        width: 100%;
-        margin-left: 0.5rem;
-        // background: green;
-        label {
-          display: block;
-          color: hsla(0, 0%, 0%, 0.48);
-        }
-        input {
-          width: 100%;
-          border: none;
-          outline: none;
-          background: none;
-          color: black;
-          font-size: 18px;
-          &::placeholder {
-            color: black;
-          }
-        }
-      }
-    }
-    .submitWrapper {
-      width: 430px;
-      margin: 0 auto;
+h2,
+p {
+  text-align: center;
+  font-family: $lato;
+  font-weight: 900;
+}
+h2 {
+  font-size: 48px;
+  margin-top: 20vh;
+}
+p {
+  color: $trans_Black;
+  font-size: 30px;
+  margin-top: 10vh;
+}
 
-      #signup {
-        background: $base_Orange;
-        border: none;
-        color: white;
-        text-transform: uppercase;
-        min-height: 54px;
-        min-width: 50px;
-        width: max-content;
-        padding: 1rem 2rem;
-        border-radius: 10px;
-        font-weight: 900;
-        font-size: 18px;
-        position: relative;
-        outline: none;
-        margin-top: 1rem;
-        letter-spacing: 0.06em;
-        cursor: pointer;
-        transition: all 0.2s;
+#signUpButtons {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2rem;
 
-        &::after {
-          content: '';
-          height: 54px;
-          width: 54px;
-          background: $base_Orange;
-          position: absolute;
-          right: -60%;
-          top: 0;
-          background: url(../asset/next.svg), $base_Orange;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 50%;
-          border-radius: 10px;
-          cursor: pointer;
-        }
-      }
+  #apple,
+  #gitHub,
+  #google {
+    height: 53px;
+    width: 53px;
+    border-radius: 11px;
+    margin: 1rem;
+    cursor: pointer;
+    transition: 0.25s;
+    &:hover {
+      background-size: 55%;
     }
   }
-  .continueWith {
-    // background: $warning_red;
-    // padding-left: 4rem;
-    margin: 2rem 0 0 7rem;
-    width: max-content;
-    p {
-      margin-left: 0;
-      margin-bottom: 0;
-      text-transform: capitalize;
-    }
-    .options {
-      // background: rgb(107, 93, 93);
-      div {
-        height: 53px;
-        width: 53px;
-        border-radius: 10px;
-        display: inline-block;
-        margin: 1rem 1rem 0 0;
-        cursor: pointer;
-        transition: 0.5;
-        &:hover {
-          transform: scale(1.075);
-        }
-      }
-      #apple {
-        background: url(../asset/apple.svg), $light_Orange;
-        @include background(50%);
-      }
-      #github {
-        background: url(../asset/github.svg), $light_Orange;
-        @include background(50%);
-      }
-      #google {
-        background: url(../asset/google.svg), $light_Orange;
-        @include background(50%);
-      }
-    }
+
+  #apple {
+    background: url(../assets/apple.svg), $light_Orange;
+    @include background(50%);
+  }
+  #gitHub {
+    background: url(../assets/github.svg), $light_Orange;
+    @include background(50%);
+  }
+  #google {
+    background: url(../assets/google.svg), $light_Orange;
+    @include background(50%);
   }
 }
