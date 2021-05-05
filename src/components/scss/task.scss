@@ -8,24 +8,31 @@ $done_green: #ccfbbc;
 $complete_green: #34a853;
 $lato: 'Lato', sans-serif;
 
+@mixin background($propSize) {
+  background-position: center;
+  background-size: $propSize;
+  background-repeat: no-repeat;
+}
+
 .taskPg {
   height: max-content;
   width: 90%;
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 1rem auto;
   padding: 1rem;
   border: 1px solid rgba(255, 165, 0, 0.5);
   border-radius: 10px;
-  background: $warning_red;
-  box-shadow: 0.5px 2px 4px 4px rgba(255, 165, 0, 0.5);
+  background: white;
+  box-shadow: 1px 4px 4px 4px rgba(255, 165, 0, 0.5);
   display: grid;
-  grid-template-columns: 3.5fr 1fr;
+  grid-template-columns: 3fr 0.5fr;
 }
 .taskDetails {
   height: 100px;
-  background: rgb(218, 116, 116);
+  padding: 30px 0;
 
   .taskName {
     font-size: 24px;
+    text-align: center;
   }
   .dueDate {
     font-size: 14px;
@@ -42,16 +49,27 @@ $lato: 'Lato', sans-serif;
 }
 .taskButtons {
   height: 100px;
-  background: rgb(211, 201, 201);
+  width: max-content;
+  // background: rgb(211, 201, 201);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 
-  #cancel_btn,
   #done_btn,
   #delete_btn {
-  }
-  #cancel_btn {
+    height: 30px;
+    width: 25.87px;
+    background: #000;
+    // display: inline-block;
+    margin: 0 0.5rem;
+    cursor: pointer;
   }
   #done_btn {
+    background: url(../assets/done.svg);
+    @include background(100%);
   }
   #delete_btn {
+    background: url(../assets/delete.svg);
+    @include background(100%);
   }
 }

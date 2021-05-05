@@ -41,7 +41,8 @@ $lato: 'Lato', sans-serif;
   background: url(../assets/donut.svg), #ffe4b26e;
   @include background(70%);
   border-radius: 10px;
-  width: 100%;
+  width: 90%;
+  height: max-content;
 }
 .rightSect {
   //   background: rgb(136, 181, 211);
@@ -68,27 +69,6 @@ $lato: 'Lato', sans-serif;
         &::placeholder {
           font-size: 24px;
           color: $trans_Black;
-        }
-      }
-      .timerOptions {
-        // background: rgb(170, 147, 147);
-        width: 80%;
-        margin: 0 auto;
-        .calender,
-        .clock {
-          display: inline-block;
-          height: 48px;
-          width: 48px;
-          cursor: pointer;
-          margin: 0.5rem;
-        }
-        .calender {
-          background: url(../assets/calender.svg);
-          @include background(100%);
-        }
-        .clock {
-          background: url(../assets/clock.svg);
-          @include background(80%);
         }
       }
     }
